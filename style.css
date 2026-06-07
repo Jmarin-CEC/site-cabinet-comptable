@@ -224,10 +224,18 @@ a {
 
 .section-heading h2,
 .content-block h2,
+.card h1,
 .card h2,
 .card h3,
 .legal-content h2 {
   color: var(--color-title);
+}
+
+.card h1 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 .section-heading h2 {
@@ -281,6 +289,12 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
+.card h2,
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
 /* Animations cartes */
 
 .offers-grid .card,
@@ -296,12 +310,6 @@ a {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(31, 59, 100, 0.14);
   border-color: #b9c8dc;
-}
-
-.card h2,
-.card h3 {
-  margin-top: 0;
-  margin-bottom: 14px;
 }
 
 /* Listes */
@@ -373,11 +381,25 @@ a {
 
 /* Contact */
 
+.contact-details a {
+  color: var(--color-text-soft);
+}
+
+.contact-details a:hover {
+  color: var(--color-text);
+}
+
+.contact-card p {
+  text-align: justify;
+}
+
 .contact-actions {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 40px;
 }
 
 /* Pages légales */
@@ -479,5 +501,9 @@ a {
 
   .btn {
     width: 100%;
+  }
+
+  .contact-card p {
+    text-align: left;
   }
 }
