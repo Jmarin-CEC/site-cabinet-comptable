@@ -87,8 +87,25 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 0;
+  padding: 12px 0;
 }
+
+/* Logo */
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 1;
+  max-width: 520px;
+}
+
+.brand-logo img {
+  max-height: 75px;
+  width: auto;
+  display: block;
+}
+
+/* Ancien bloc texte, conservé si besoin */
 
 .brand {
   display: flex;
@@ -224,18 +241,10 @@ a {
 
 .section-heading h2,
 .content-block h2,
-.card h1,
 .card h2,
 .card h3,
 .legal-content h2 {
   color: var(--color-title);
-}
-
-.card h1 {
-  margin-top: 0;
-  margin-bottom: 14px;
-  font-size: 1.8rem;
-  line-height: 1.2;
 }
 
 .section-heading h2 {
@@ -391,6 +400,7 @@ a {
 
 .contact-card p {
   text-align: justify;
+  text-justify: inter-word;
 }
 
 .contact-actions {
@@ -452,12 +462,29 @@ a {
   .presentation-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .brand-logo {
+    max-width: 430px;
+  }
+
+  .brand-logo img {
+    max-height: 52px;
+  }
 }
 
 @media (max-width: 760px) {
   .header-container {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .brand-logo {
+    max-width: 100%;
+  }
+
+  .brand-logo img {
+    max-height: 50px;
+    max-width: 100%;
   }
 
   .main-nav {
@@ -504,6 +531,7 @@ a {
   }
 
   .contact-card p {
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
